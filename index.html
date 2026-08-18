@@ -4,7 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shubh Sathwara | AI Engineer</title>
+  <title>Shubh Sathwara | Portfolio</title>
+
+  <!-- Google Font: Space Mono for the tech tagline -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -16,7 +19,7 @@
       --soft: #616e6c;
       --line: rgba(255, 255, 255, 0.08);
       --coral: #ff7253;
-      --cyan: #5fd4ff;
+      --cyan: #38bdf8;
       --green: #8ce99a;
       --amber: #ffc857;
       --shadow: 0 22px 80px rgba(0, 0, 0, .45);
@@ -33,7 +36,7 @@
       scroll-behavior: smooth;
     }
 
-    /* Custom Sleek Dark Scrollbar */
+    /* Sleek Custom Scrollbar */
     ::-webkit-scrollbar {
       width: 6px;
     }
@@ -79,7 +82,7 @@
     }
 
     /* ========================================================
-     1. HERO FULLSCREEN
+     1. HERO FULLSCREEN (CINDY ZHU STUDIO DISPLAY)
      ======================================================== */
     .hero {
       position: relative;
@@ -157,20 +160,24 @@
       justify-content: space-between;
     }
 
+    /* EXACT MATCHED TAGLINE CSS */
     .hero-tagline {
-      max-width: 380px;
-      font-size: 0.86rem;
-      line-height: 1.55;
-      font-weight: 600;
+      font-family: 'Space Mono', monospace;
+      font-weight: 700;
+      font-size: 0.92rem;
+      line-height: 1.7;
       letter-spacing: 0.06em;
-      color: var(--muted);
+      color: #9ba6a4;
       text-transform: uppercase;
+      max-width: 440px;
+      border: none;
+      background: transparent;
+      padding: 0;
       pointer-events: auto;
     }
 
-    .hero-tagline .hl-learn,
-    .hero-tagline .hl-think {
-      color: var(--cyan);
+    .hero-tagline .highlight {
+      color: #38bdf8;
       font-weight: 700;
     }
 
@@ -214,6 +221,7 @@
       background: #000000;
     }
 
+    /* 🟣 Cindy Zhu Ambient Plasma Halo */
     .ambient-orb {
       position: absolute;
       top: 0;
@@ -276,7 +284,7 @@
     }
 
     /* ========================================================
-     2. STICKY NAVBAR
+     2. STICKY NAVBAR (REVEALED ONLY ON SCROLL)
      ======================================================== */
     .site-header {
       position: fixed;
@@ -437,6 +445,7 @@
       font-size: 1.02rem;
     }
 
+    /* About Grid */
     .about-grid {
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(300px, .56fr);
@@ -489,6 +498,7 @@
       font-size: .92rem;
     }
 
+    /* Skills Grid */
     .stack-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -557,6 +567,7 @@
       font-size: .85rem;
     }
 
+    /* Projects Grid */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -607,6 +618,7 @@
       color: var(--cyan);
     }
 
+    /* Timeline */
     .timeline {
       display: grid;
       gap: 16px;
@@ -624,6 +636,7 @@
       font-weight: 760;
     }
 
+    /* Services */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -646,6 +659,7 @@
       background: linear-gradient(135deg, var(--amber), var(--coral));
     }
 
+    /* Contact */
     .contact-band {
       display: grid;
       grid-template-columns: minmax(0, .75fr) minmax(320px, .55fr);
@@ -770,27 +784,27 @@
   </style>
 </head>
 
-<body>
+<body class="site-revealed">
 
-  <!-- Pure High-Vibrancy Color Matrix Chromatic Dispersion Filters -->
+  <!-- High-Vibrancy SVG Color Matrix Dispersion Filters -->
   <svg class="visually-hidden" aria-hidden="true">
     <filter id="isolateRed" color-interpolation-filters="sRGB">
       <feColorMatrix type="matrix" values="
       1 0 0 0 0
       0 0 0 0 0
       0 0 0 0 0
-      0 0 0 1 0" />
+      0 0 0 1 0"></feColorMatrix>
     </filter>
     <filter id="isolateBlue" color-interpolation-filters="sRGB">
       <feColorMatrix type="matrix" values="
       0 0 0 0 0
       0 0 0 0 0
       0 0 1 0 0
-      0 0 0 1 0" />
+      0 0 0 1 0"></feColorMatrix>
     </filter>
   </svg>
 
-  <!-- STICKY TOP NAVBAR -->
+  <!-- STICKY TOP NAVBAR (Revealed only when scrolling through main content) -->
   <header class="site-header" id="stickyHeader">
     <a class="brand" href="#top">
       <span class="brand__mark">SS</span>
@@ -799,24 +813,27 @@
 
     <nav class="nav">
       <a href="#about">About</a>
-      <a href="#skills">Stack</a>
+      <a href="#skills">Skills</a>
       <a href="#projects">Work</a>
       <a href="#experience">Story</a>
       <a href="#contact">Contact</a>
     </nav>
 
-    <div>
-      <a class="button button--solid" href="mailto:hello@example.com">Contact</a>
+    <div style="display: flex; gap: 12px;">
+      <a class="button" href="assets/Shubh_Sathwara_Resume.pdf" download="" target="_blank">Resume</a>
+      <a class="button button--solid" href="mailto:skd.s2905@gmail.com">Hire Me</a>
     </div>
   </header>
 
   <!-- ========================================================
-     HERO: HIGH-PRECISION RAZOR-SHARP HELMET SWEEP
+     HERO: CRYSTAL CLEAR FULLSCREEN SCREEN
      ======================================================== -->
   <section class="hero" id="top">
     <div class="hero-ui">
       <div class="hero-ui-top">
-        <a class="hero-brand" href="#top">Shubh Sathwara<span class="dot">.</span></a>
+        <a class="hero-brand" href="#top"><span class="dot">
+            <font color="#ffffff">Shubh Sathwara</font>.
+          </span></a>
 
         <div class="hero-nav">
           <a href="#contact">Contact</a>
@@ -825,193 +842,227 @@
 
       <div class="hero-ui-bottom">
         <p class="hero-tagline">
-          Building machines that <span class="hl-learn">learn.</span><br>
-          Engineering systems that <span class="hl-think">think.</span>
+          BUILDING MACHINES THAT <span class="highlight">LEARN.</span><br>
+          ENGINEERING SYSTEMS THAT <span class="highlight">THINK.</span>
         </p>
 
+        <!-- Bottom Right Hover Progress Meter & Scroll Cue -->
         <div class="hero-scroll-cue">
           <div class="hover-meter">
-            <div class="hover-meter-bar" id="hoverProgressBar"></div>
+            <div class="hover-meter-bar" id="hoverProgressBar" style="width: 12.1743%;"></div>
           </div>
           <span>(Scroll)</span>
         </div>
       </div>
     </div>
 
-    <!-- 4 Image Layers -->
+    <!-- 4 Image Layers in assets folder -->
     <div class="hero__media" id="liquidHero">
-      <div class="ambient-orb" id="ambientOrb"></div>
+      <div class="ambient-orb" id="ambientOrb"
+        style="transform: translate3d(432.2px, 310.8px, 0px) scale(0.86); opacity: 0.93;"></div>
 
       <img class="layer-base" src="assets/portrait-base.jpg" alt="Base Layer">
-      <img class="layer-fringe red" id="imgFringeR" src="assets/portrait-chrome-fringe-red.jpg" alt="">
-      <img class="layer-fringe blue" id="imgFringeB" src="assets/portrait-chrome-fringe-blue.jpg" alt="">
-      <img class="layer-chrome" id="imgChrome" src="assets/portrait-chrome.jpg" alt="">
+      <img class="layer-fringe red" id="imgFringeR" src="assets/portrait-chrome-fringe-red.jpg" alt=""
+        style="mask-image: radial-gradient(90.3px at 542.2px 420.8px, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0) 77.3px, rgb(255, 255, 255) 83.8px, rgba(255, 255, 255, 0) 90.3px); opacity: 1; transform: translateX(-4px);">
+      <img class="layer-fringe blue" id="imgFringeB" src="assets/portrait-chrome-fringe-blue.jpg" alt=""
+        style="mask-image: radial-gradient(90.3px at 542.2px 420.8px, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0) 77.3px, rgb(255, 255, 255) 83.8px, rgba(255, 255, 255, 0) 90.3px); opacity: 1; transform: translateX(4px);">
+      <img class="layer-chrome" id="imgChrome" src="assets/portrait-chrome.jpg" alt=""
+        style="mask-image: radial-gradient(83.8px at 542.2px 420.8px, rgb(255, 255, 255) 0px, rgb(255, 255, 255) 65.8px, rgba(255, 255, 255, 0) 83.8px); opacity: 1;">
     </div>
   </section>
 
   <!-- ========================================================
-     MAIN PORTFOLIO SECTIONS
+     MAIN PORTFOLIO (REVEALED AFTER 3.5s HOVER OR SCROLL)
      ======================================================== -->
   <main id="main">
+    <!-- ABOUT SECTION -->
     <section class="section" id="about">
       <div class="section__inner">
         <div class="section__top">
           <div>
             <p class="kicker">Profile</p>
-            <h2>Engineering intelligent systems from research to production.</h2>
+            <h2>Engineering intelligent systems with a focus on precision, performance, and
+              real-world value.</h2>
           </div>
-          <p class="section__lead">Bridging the gap between frontier neural models and scalable, low-latency
-            infrastructure.</p>
+          <p class="section__lead">Currently building depth across machine learning and modern AI
+            through hands-on
+            projects, research, and continuous experimentation, with a focus on growing into an AI Engineer.</p>
         </div>
 
         <div class="about-grid">
           <article class="story">
-            <p>I am an AI Engineer focused on architecting intelligent applications that combine deep learning models,
-              agentic reasoning, and production-grade software engineering.</p>
-            <p>My work centers on building reliable RAG pipelines, fine-tuning task-specific LLMs, implementing
-              tool-calling agents, and serving high-throughput inference APIs that perform under heavy concurrent loads.
-            </p>
+            <p>I’m an AI/ML-focused developer building practical experience across machine
+              learning, deep learning,
+              computer vision, NLP, and modern AI. I turn concepts into working systems through hands-on
+              experimentation, problem-solving, and continuous learning.</p>
+            <p>I focus on building practical AI systems that are reliable, efficient, and designed
+              to create meaningful
+              real-world impact.</p>
           </article>
 
           <div class="stats">
             <div class="stat">
-              <strong>&lt; 50ms</strong>
-              <span>Target inference latency window.</span>
+              <strong><strong>AI / ML</strong>
+                <em>Focused Direction</em></strong>
+              <span>Building toward intelligent systems through machine learning and modern
+                AI.</span>
             </div>
             <div class="stat">
-              <strong>99.9%</strong>
-              <span>Pipeline & API service availability.</span>
+              <strong><strong>RESEARCH</strong><br>
+                <em>IEEE Accepted</em></strong>
+              <span>AI-based fitness &amp; posture correction research.</span>
             </div>
             <div class="stat">
-              <strong>100%</strong>
-              <span>Deterministic validation on LLM outputs.</span>
+              <strong><strong>HANDS-ON</strong><br>
+                <em>Project Driven</em></strong>
+              <span>Turning concepts into working systems across computer vision and NLP.</span>
             </div>
             <div class="stat">
-              <strong>1:1</strong>
-              <span>End-to-end delivery from model to deployment.</span>
+              <strong><strong>EVOLVING</strong><br>
+                <em>Continuous Learning</em></strong>
+              <span>Expanding from ML foundations into deep learning, LLMs, RAG, and agentic
+                AI.</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- SKILLS SECTION -->
     <section class="section section--alt" id="skills">
       <div class="section__inner">
         <div class="section__top">
           <div>
-            <p class="kicker">Technical Stack</p>
-            <h2>End-to-end AI engineering & deployment capabilities.</h2>
+            <p class="kicker">Capabilities</p>
+            <h2>Core capabilities across AI, machine learning, and data.</h2>
           </div>
-          <p class="section__lead">Core frameworks, vector stores, modeling tools, and deployment environments.</p>
+          <p class="section__lead">A focused foundation in AI, machine learning, and the tools
+            shaping modern
+            intelligent systems.</p>
         </div>
 
         <div class="stack-grid">
-          <article class="skill-card">
-            <h3>Core AI & Modeling</h3>
-            <p>Model architecture, fine-tuning, loss optimization, and automated evaluation pipelines.</p>
+          <article class="skill-card magnetic-card">
+            <h3>Machine Learning</h3>
+            <p>Building a foundation in machine learning through practical models and data-driven
+              problem solving.</p>
             <div class="skill-tags">
               <span class="tag">Python</span>
-              <span class="tag">PyTorch</span>
-              <span class="tag">Transformers</span>
-              <span class="tag">HuggingFace</span>
+              <span class="tag">Scikit-Learn</span>
+              <span class="tag">Supervised Learning</span>
+              <span class="tag">Model Evaluation</span>
             </div>
           </article>
 
-          <article class="skill-card">
-            <h3>LLM & Agent Systems</h3>
-            <p>Context routing, RAG retrieval architectures, function calling, and vector memory.</p>
+          <article class="skill-card magnetic-card">
+            <h3>Deep Learning</h3>
+            <p>Exploring neural networks and learning-based approaches for intelligent
+              applications.</p>
             <div class="skill-tags">
-              <span class="tag">LangChain</span>
-              <span class="tag">LlamaIndex</span>
-              <span class="tag">Qdrant</span>
+              <span class="tag">ANNs</span>
+              <span class="tag">CNNs</span>
+              <span class="tag">RNNs</span>
+              <span class="tag">Computer Vision</span>
+            </div>
+          </article>
+
+          <article class="skill-card magnetic-card">
+            <h3>Gen &amp; Agentic AI</h3>
+            <p>Exploring modern AI through language models, retrieval, and intelligent workflows.
+            </p>
+            <div class="skill-tags">
+              <span class="tag">LLMs</span>
               <span class="tag">RAG</span>
+              <span class="tag">AI Agents</span>
             </div>
           </article>
 
-          <article class="skill-card">
-            <h3>High-Performance APIs</h3>
-            <p>Low-latency model serving, asynchronous queues, caching, and microservices.</p>
+          <article class="skill-card magnetic-card">
+            <h3>Professional Strengths</h3>
+            <p>A strong problem-solving mindset with a focus on continuous learning, effective
+              communication, and seamless team collaboration.</p>
             <div class="skill-tags">
-              <span class="tag">FastAPI</span>
-              <span class="tag">AsyncIO</span>
-              <span class="tag">PostgreSQL</span>
-              <span class="tag">Redis</span>
-            </div>
-          </article>
-
-          <article class="skill-card">
-            <h3>MLOps & Deployment</h3>
-            <p>Containerized workloads, CI/CD pipelines, GPU orchestration, and telemetry.</p>
-            <div class="skill-tags">
-              <span class="tag">Docker</span>
-              <span class="tag">Git</span>
-              <span class="tag">Linux</span>
-              <span class="tag">Cloud Deploy</span>
+              <span class="tag">Continuous Learning</span>
+              <span class="tag">Communication</span>
+              <span class="tag">Team Collaboration</span>
             </div>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- PROJECTS SECTION -->
     <section class="section" id="projects">
       <div class="section__inner">
         <div class="section__top">
           <div>
             <p class="kicker">Selected Work</p>
-            <h2>Production-grade AI systems, agents, and pipelines.</h2>
+            <h2>AI projects built to turn concepts into working systems.</h2>
           </div>
-          <p class="section__lead">Case studies showcasing model integration, system design, and benchmarks.</p>
+          <p class="section__lead">A selection of AI projects spanning computer vision, NLP, and
+            modern intelligent
+            systems.</p>
         </div>
 
         <div class="projects-grid">
-          <article class="project-card">
+          <article class="project-card magnetic-card">
             <div class="project-visual"></div>
             <div class="project-body">
-              <h3>Autonomous Agent RAG Platform</h3>
-              <p>Multi-step research and retrieval pipeline with automated hallucination checks and vector memory.</p>
+              <h3><strong>Trainsight-</strong><strong>Real-Time Fitness &amp; Posture Correction</strong></h3>
+              <p>A computer vision system that tracks body movement and detects incorrect exercise
+                form in real time,
+                with feedback through a webcam.</p>
               <div class="project-tags">
-                <span class="tag">Python</span>
-                <span class="tag">Qdrant</span>
-                <span class="tag">FastAPI</span>
+                <span class="tag">OpenCV</span>
+                <span class="tag">YOLOv4</span>
+                <span class="tag">Mediapipe</span>
               </div>
               <div class="project-links">
-                <a class="text-link" href="#contact">GitHub <span>&rarr;</span></a>
-                <a class="text-link" href="#contact">Live Demo <span>&rarr;</span></a>
+                <a class="text-link" href="#contact">Case Study <span>→</span></a>
+                <a class="text-link" href="#contact">Coming Soon<br><span>→</span></a>
               </div>
             </div>
           </article>
 
-          <article class="project-card">
+          <article class="project-card magnetic-card">
             <div class="project-visual"></div>
             <div class="project-body">
-              <h3>Intelligent Workflow Assistant</h3>
-              <p>Custom-tooled conversational agent with deterministic function calling and session-state management.
+              <h3><strong>Spam Email Classification</strong><br>
+                <strong>NLP-Based Email Classification System</strong>
+              </h3>
+              <p>An NLP system that classifies 5,000+ emails as spam or legitimate, achieving
+                <strong>96% accuracy</strong> and <strong>0.97
+                  AUC-ROC</strong>.
               </p>
               <div class="project-tags">
-                <span class="tag">PyTorch</span>
-                <span class="tag">LangChain</span>
-                <span class="tag">Docker</span>
+                <span class="tag">NLP</span>
+                <span class="tag">TF-IDF</span>
+                <span class="tag">Scikit-Learn</span>
               </div>
               <div class="project-links">
-                <a class="text-link" href="#contact">GitHub <span>&rarr;</span></a>
-                <a class="text-link" href="#contact">Architecture <span>&rarr;</span></a>
+                <a class="text-link" href="#contact">Case Study <span>→</span></a>
+                <a class="text-link" href="#contact">GitHub <span>→</span></a>
               </div>
             </div>
           </article>
 
-          <article class="project-card">
+          <article class="project-card magnetic-card">
             <div class="project-visual"></div>
             <div class="project-body">
-              <h3>Real-Time Inference Engine</h3>
-              <p>Optimized model serving pipeline delivering sub-50ms latency under high concurrent load.</p>
+              <h3><strong>GenAI &amp; Intelligent
+                  Systems</strong><br>
+                <strong>Exploring Modern AI</strong><br>
+              </h3>
+              <p>Exploring LLMs, RAG, agentic AI, and generative AI through hands-on projects and
+                experimentation.</p>
               <div class="project-tags">
-                <span class="tag">ONNX</span>
-                <span class="tag">FastAPI</span>
-                <span class="tag">Redis</span>
+                <span class="tag">Generative AI</span>
+                <span class="tag">RAG</span>
+                <span class="tag">AI Agents</span>
               </div>
               <div class="project-links">
-                <a class="text-link" href="#contact">GitHub <span>&rarr;</span></a>
-                <a class="text-link" href="#contact">Case Study <span>&rarr;</span></a>
+                <a class="text-link" href="#contact">Case Study <span>→</span></a>
+                <a class="text-link" href="#contact">Coming Soon<br><span>→</span></a>
               </div>
             </div>
           </article>
@@ -1019,113 +1070,125 @@
       </div>
     </section>
 
+    <!-- EXPERIENCE TIMELINE -->
     <section class="section section--alt" id="experience">
       <div class="section__inner">
         <div class="section__top">
           <div>
             <p class="kicker">Journey</p>
-            <h2>Engineering background, education, and milestones.</h2>
+            <h2>From foundations to intelligent systems.</h2>
           </div>
-          <p class="section__lead">Experience across applied machine learning, backend architecture, and software
-            engineering.</p>
+          <p class="section__lead">Explore my broader academic journey and professional profile on
+            LinkedIn🔗</p>
         </div>
 
         <div class="timeline">
-          <article class="timeline-item">
+          <article class="timeline-item magnetic-card">
             <div class="timeline-date">2026 - Present</div>
             <div>
-              <h3>AI & Systems Engineer</h3>
-              <p>Building production LLM agents, scalable RAG search engines, and low-latency API architectures.</p>
+              <h3>Exploring Modern AI</h3>
+              <p>Pursuing advanced AI studies in the USA while exploring deep learning, generative
+                AI, LLMs, RAG, and
+                agentic systems through hands-on projects, with a focus on production-ready intelligent systems.</p>
             </div>
           </article>
 
-          <article class="timeline-item">
+          <article class="timeline-item magnetic-card">
             <div class="timeline-date">2025 - 2026</div>
             <div>
-              <h3>Full-Stack & Deep Learning Development</h3>
-              <p>Developed end-to-end applications across core Python, neural networks, REST APIs, and containerized
-                deployment.</p>
+              <h3>Building the Foundations</h3>
+              <p>Developing a strong foundation in Python, mathematics, data, and machine learning
+                while turning
+                concepts into hands-on projects.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- SERVICES SECTION -->
     <section class="section" id="services">
       <div class="section__inner">
         <div class="section__top">
           <div>
-            <p class="kicker">Core Competencies</p>
-            <h2>Specialized AI engineering services & capabilities.</h2>
+            <p class="kicker">What I Build</p>
+            <h2>Focused on developing practical AI solutions while growing toward production-ready
+              engineering.</h2>
           </div>
-          <p class="section__lead">From concept and proof-of-concept to production hardening and cloud deployment.</p>
+          <p class="section__lead">Focused on continuous learning, practical projects, and building
+            toward
+            production-ready AI systems.</p>
         </div>
 
         <div class="services-grid">
-          <article class="service-card">
+          <article class="service-card magnetic-card">
             <div class="service-index">01</div>
-            <h3>Autonomous Agents & RAG</h3>
-            <p>High-accuracy document retrieval pipelines, hybrid search, embedding optimization, and tool execution.
-            </p>
+            <h3>Machine Learning</h3>
+            <p>Focused on developing practical AI solutions while growing toward production-ready
+              engineering.</p>
           </article>
 
-          <article class="service-card">
+          <article class="service-card magnetic-card">
             <div class="service-index">02</div>
-            <h3>Model Fine-Tuning & Serving</h3>
-            <p>Task-specific fine-tuning (LoRA/QLoRA), model quantization, and low-latency API serving infrastructure.
-            </p>
+            <h3>Deep Learning &amp; AI</h3>
+            <p>Exploring neural networks and modern AI approaches to build systems capable of
+              learning from complex
+              data.</p>
           </article>
 
-          <article class="service-card">
+          <article class="service-card magnetic-card">
             <div class="service-index">03</div>
-            <h3>Production AI Integration</h3>
-            <p>Full-stack backend logic, structured schema enforcement, streaming responses, and telemetry.</p>
+            <h3>AI Engineering</h3>
+            <p>Exploring LLMs, RAG pipelines, AI agents, generative AI, and modern techniques for
+              building intelligent
+              applications.</p>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- CONTACT SECTION -->
     <section class="section section--alt" id="contact">
       <div class="section__inner">
         <div class="contact-band">
           <div class="contact-copy">
             <p class="kicker">Contact</p>
-            <h2>Let's build intelligent systems together.</h2>
-            <p>Reach out directly for AI engineering roles, consulting, or technical collaborations.</p>
+            <h2>Let’s turn ideas into intelligent solutions.</h2>
+            <p><br></p>
 
             <div class="contact-list">
-              <a class="contact-item" href="mailto:hello@example.com">
+              <a class="contact-item" href="mailto:skd.s2905@gmail.com">
                 <strong>Email</strong>
-                <span>hello@example.com</span>
+                <span>skd.s2905@gmail.com</span>
               </a>
-              <a class="contact-item" href="https://github.com/" target="_blank" rel="noreferrer">
-                <strong>GitHub</strong>
-                <span>github.com/shubhsathwara</span>
-              </a>
-              <a class="contact-item" href="https://linkedin.com/" target="_blank" rel="noreferrer">
-                <strong>LinkedIn</strong>
-                <span>linkedin.com/in/shubhsathwara</span>
+              <a class="contact-item" href="tel:+918799454648">
+                <strong>Phone</strong>
+                <span>+91 8799454648</span>
               </a>
               <div class="contact-item">
-                <strong>Focus</strong>
-                <span>LLMs, Agents &amp; MLOps</span>
+                <strong>Location</strong>
+                <span>Ahmedabad, Gujarat</span>
               </div>
+              <a class="contact-item" href="https://www.linkedin.com/in/shubh-sathwara-4b1baa282/" target="_blank"
+                rel="noreferrer">
+                <strong>LinkedIn</strong>
+                <span>https://www.linkedin.com/in/shubh-sathwara-4b1baa282/</span>
+              </a>
             </div>
           </div>
 
-          <form class="contact-form" action="mailto:hello@example.com" method="post" enctype="text/plain">
+          <form class="contact-form" action="mailto:skd.s2905@gmail.com" method="post" enctype="text/plain">
             <div class="field">
               <label for="name">Name</label>
-              <input id="name" name="name" required placeholder="Your Name">
+              <input id="name" name="name" required="" placeholder="Your Name">
             </div>
             <div class="field">
               <label for="email">Email</label>
-              <input id="email" name="email" type="email" required placeholder="your.email@example.com">
+              <input id="email" name="email" type="email" required="" placeholder="your.email@example.com">
             </div>
             <div class="field">
               <label for="message">Message</label>
-              <textarea id="message" name="message" required
-                placeholder="Tell me about your AI project or opportunity..."></textarea>
+              <textarea id="message" name="message" required="" placeholder="Tell me about your project..."></textarea>
             </div>
             <button class="button button--solid" type="submit">Send Message</button>
           </form>
@@ -1134,18 +1197,17 @@
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer__inner">
-      <span>© <span id="year"></span> Shubh Sathwara. Built with care.</span>
+      <span>© <span id="year">2026</span> <span>Shubh Sathwara</span>. Built with care.</span>
       <div>
         <a href="#top">Top</a>
       </div>
     </div>
   </footer>
 
-  <!-- ========================================================
-     RAZOR-SHARP OPTICAL ENGINE
-     ======================================================== -->
+  <!-- BUTTERY-SMOOTH DELTA-TIMED OPTICAL SWEEP ENGINE -->
   <script>
     (function () {
       "use strict";
@@ -1167,18 +1229,17 @@
       var smoothX = 0, smoothY = 0;
       var lastSmoothX = 0, lastSmoothY = 0;
       var pointerActive = false;
-      var lastMoveTime = performance.now();
       var lastFrameTime = performance.now();
 
-      // Crystal-clear optics constants
-      var FOLLOW_EASE = 0.10;
-      var DECAY = 0.955;
-      var MAX_POINTS = 30;
-      var FEATHER = 18;         // Razor-sharp 18px aperture
-      var BASE_RADIUS_FRAC = 0.125;
-      var RING_WIDTH = 13;      // Vivid chromatic refraction rim
-      var FRINGE_OFFSET = 4.0;
-      var SUBSTEP_GAP = 6;
+      // Silky-Smooth Inertia & Aperture Constants
+      var FOLLOW_EASE = 0.082;
+      var DECAY = 0.948;
+      var MAX_POINTS = 36;
+      var FEATHER = 20;
+      var BASE_RADIUS_FRAC = 0.13;
+      var RING_WIDTH = 13;
+      var FRINGE_OFFSET = 3.5;
+      var SUBSTEP_GAP = 5;
       var trail = [];
 
       var orbX = 0, orbY = 0;
@@ -1202,7 +1263,6 @@
         targetX = e.clientX - rect.left;
         targetY = e.clientY - rect.top;
         pointerActive = true;
-        lastMoveTime = performance.now();
       }
 
       function triggerSiteReveal() {
@@ -1215,15 +1275,14 @@
         var revealStops = [];
         var ringStops = [];
 
-        // 1. Reveal helmet directly under the moving glowing circle
         var orbR = orbRadius || (Math.min(w, h) * 0.14);
         var orbInner = Math.max(orbR - FEATHER, 0);
 
         revealStops.push(
-          "radial-gradient(circle " + orbR.toFixed(1) + "px at " + orbX.toFixed(1) + "px " + orbY.toFixed(1) + "px, " +
+          "radial-gradient(circle " + orbR.toFixed(2) + "px at " + orbX.toFixed(2) + "px " + orbY.toFixed(2) + "px, " +
           "#ffffff 0px, " +
-          "#ffffff " + orbInner.toFixed(1) + "px, " +
-          "rgba(255,255,255,0) " + orbR.toFixed(1) + "px)"
+          "#ffffff " + orbInner.toFixed(2) + "px, " +
+          "rgba(255,255,255,0) " + orbR.toFixed(2) + "px)"
         );
 
         var orbRingOuter = orbR + RING_WIDTH * 0.5;
@@ -1231,14 +1290,13 @@
         var orbRingMid = (orbRingInner + orbRingOuter) * 0.5;
 
         ringStops.push(
-          "radial-gradient(circle " + orbRingOuter.toFixed(1) + "px at " + orbX.toFixed(1) + "px " + orbY.toFixed(1) + "px, " +
+          "radial-gradient(circle " + orbRingOuter.toFixed(2) + "px at " + orbX.toFixed(2) + "px " + orbY.toFixed(2) + "px, " +
           "rgba(255,255,255,0) 0px, " +
-          "rgba(255,255,255,0) " + orbRingInner.toFixed(1) + "px, " +
-          "rgba(255,255,255,1) " + orbRingMid.toFixed(1) + "px, " +
-          "rgba(255,255,255,0) " + orbRingOuter.toFixed(1) + "px)"
+          "rgba(255,255,255,0) " + orbRingInner.toFixed(2) + "px, " +
+          "rgba(255,255,255,1) " + orbRingMid.toFixed(2) + "px, " +
+          "rgba(255,255,255,0) " + orbRingOuter.toFixed(2) + "px)"
         );
 
-        // 2. Reveal helmet along user pointer ripple trail
         for (var i = 0; i < trail.length; i++) {
           var p = trail[i];
           if (p.strength <= 0.015) continue;
@@ -1247,10 +1305,10 @@
           var inner = Math.max(r - FEATHER, 0);
 
           revealStops.push(
-            "radial-gradient(circle " + r.toFixed(1) + "px at " + p.x.toFixed(1) + "px " + p.y.toFixed(1) + "px, " +
+            "radial-gradient(circle " + r.toFixed(2) + "px at " + p.x.toFixed(2) + "px " + p.y.toFixed(2) + "px, " +
             "#ffffff 0px, " +
-            "#ffffff " + inner.toFixed(1) + "px, " +
-            "rgba(255,255,255,0) " + r.toFixed(1) + "px)"
+            "#ffffff " + inner.toFixed(2) + "px, " +
+            "rgba(255,255,255,0) " + r.toFixed(2) + "px)"
           );
 
           var ringOuter = r + RING_WIDTH * 0.5;
@@ -1258,20 +1316,18 @@
           var ringMid = (ringInner + ringOuter) * 0.5;
 
           ringStops.push(
-            "radial-gradient(circle " + ringOuter.toFixed(1) + "px at " + p.x.toFixed(1) + "px " + p.y.toFixed(1) + "px, " +
+            "radial-gradient(circle " + ringOuter.toFixed(2) + "px at " + p.x.toFixed(2) + "px " + p.y.toFixed(2) + "px, " +
             "rgba(255,255,255,0) 0px, " +
-            "rgba(255,255,255,0) " + ringInner.toFixed(1) + "px, " +
-            "rgba(255,255,255," + p.strength.toFixed(2) + ") " + ringMid.toFixed(1) + "px, " +
-            "rgba(255,255,255,0) " + ringOuter.toFixed(1) + "px)"
+            "rgba(255,255,255,0) " + ringInner.toFixed(2) + "px, " +
+            "rgba(255,255,255," + p.strength.toFixed(3) + ") " + ringMid.toFixed(2) + "px, " +
+            "rgba(255,255,255,0) " + ringOuter.toFixed(2) + "px)"
           );
         }
 
-        var revealMask = revealStops.join(", ");
-        var ringMask = ringStops.join(", ");
-
-        setMask(chrome, revealMask);
+        setMask(chrome, revealStops.join(", "));
         chrome.style.opacity = 1;
 
+        var ringMask = ringStops.join(", ");
         setMask(fringeR, ringMask);
         fringeR.style.opacity = 1;
         fringeR.style.transform = "translateX(" + (-FRINGE_OFFSET) + "px)";
@@ -1285,24 +1341,24 @@
         var dt = Math.min(now - lastFrameTime, 32);
         lastFrameTime = now;
 
-        // 🟣 90% Helmet Sweep Path in 1 Smooth 360° Rotation
-        var t = now * 0.00078;
+        var timeScale = dt / 16.67;
+
+        var t = now * 0.00068;
         var cx = w * 0.50;
         var cy = h * 0.51;
-
-        var rx = w * 0.128;
-        var ry = h * 0.138;
+        var rx = w * 0.126;
+        var ry = h * 0.136;
 
         orbX = cx + Math.cos(t) * rx;
         orbY = cy + Math.sin(t) * ry;
 
-        var orbRadius = Math.min(w, h) * (0.138 + Math.sin(t * 2) * 0.015);
+        var orbRadius = Math.min(w, h) * (0.136 + Math.sin(t * 1.8) * 0.012);
 
         if (ambientOrb) {
-          var orbScale = 0.95 + Math.sin(t * 1.8) * 0.10;
-          var orbOpacity = 0.80 + Math.cos(t * 1.4) * 0.16;
-          ambientOrb.style.transform = "translate3d(" + (orbX - 110).toFixed(1) + "px, " + (orbY - 110).toFixed(1) + "px, 0) scale(" + orbScale.toFixed(2) + ")";
-          ambientOrb.style.opacity = orbOpacity.toFixed(2);
+          var orbScale = 0.96 + Math.sin(t * 1.5) * 0.08;
+          var orbOpacity = 0.82 + Math.cos(t * 1.2) * 0.14;
+          ambientOrb.style.transform = "translate3d(" + (orbX - 110).toFixed(2) + "px, " + (orbY - 110).toFixed(2) + "px, 0) scale(" + orbScale.toFixed(3) + ")";
+          ambientOrb.style.opacity = orbOpacity.toFixed(3);
         }
 
         if (pointerActive && !isRevealed) {
@@ -1315,7 +1371,7 @@
         }
 
         if (pointerActive) {
-          var normEase = 1 - Math.pow(1 - FOLLOW_EASE, dt / 16.67);
+          var normEase = 1 - Math.pow(1 - FOLLOW_EASE, timeScale);
           smoothX += (targetX - smoothX) * normEase;
           smoothY += (targetY - smoothY) * normEase;
 
@@ -1324,9 +1380,9 @@
           var dist = Math.hypot(dx, dy);
 
           var baseR = Math.min(w, h) * BASE_RADIUS_FRAC;
-          var r = baseR + Math.min(dist * 1.5, baseR * 0.55);
+          var r = baseR + Math.min(dist * 1.2, baseR * 0.45);
 
-          var steps = Math.max(1, Math.min(8, Math.round(dist / SUBSTEP_GAP)));
+          var steps = Math.max(1, Math.min(10, Math.round(dist / SUBSTEP_GAP)));
           for (var s = 1; s <= steps; s++) {
             var st = s / steps;
             trail.push({
@@ -1343,8 +1399,9 @@
           while (trail.length > MAX_POINTS) trail.shift();
         }
 
+        var decayPow = Math.pow(DECAY, timeScale);
         for (var i = trail.length - 1; i >= 0; i--) {
-          trail[i].strength *= DECAY;
+          trail[i].strength *= decayPow;
           if (trail[i].strength <= 0.015) trail.splice(i, 1);
         }
 
