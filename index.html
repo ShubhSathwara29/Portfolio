@@ -232,15 +232,13 @@
       pointer-events: none;
       z-index: 2;
       mix-blend-mode: screen;
-      background: radial-gradient(
-        circle at 50% 50%,
-        rgba(15, 5, 30, 0.1) 0%,
-        rgba(75, 20, 160, 0.45) 28%,
-        rgba(110, 45, 235, 0.5) 48%,
-        rgba(40, 75, 210, 0.3) 68%,
-        rgba(10, 20, 60, 0.08) 85%,
-        transparent 100%
-      );
+      background: radial-gradient(circle at 50% 50%,
+          rgba(15, 5, 30, 0.1) 0%,
+          rgba(75, 20, 160, 0.45) 28%,
+          rgba(110, 45, 235, 0.5) 48%,
+          rgba(40, 75, 210, 0.3) 68%,
+          rgba(10, 20, 60, 0.08) 85%,
+          transparent 100%);
       filter: blur(14px);
       box-shadow: 0 0 50px rgba(90, 30, 210, 0.25);
       will-change: transform, opacity;
@@ -565,11 +563,11 @@
       min-height: 30px;
       display: inline-flex;
       align-items: center;
-      padding: 0 10px;
+      padding: 0 12px;
       border-radius: 999px;
-      border: 1px solid var(--line);
-      background: rgba(255, 255, 255, .045);
-      color: var(--muted);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.05);
+      color: #d1d5db;
       font-size: .85rem;
     }
 
@@ -688,10 +686,16 @@
       border-radius: 10px;
       color: var(--muted);
       background: rgba(255, 255, 255, .035);
+      transition: border-color 0.2s ease, background 0.2s ease;
     }
 
     .contact-item strong {
       color: var(--ink);
+    }
+
+    a.contact-item:hover {
+      border-color: rgba(95, 212, 255, 0.4);
+      background: rgba(255, 255, 255, 0.06);
     }
 
     .contact-form {
@@ -940,55 +944,52 @@
             <p class="kicker">Capabilities</p>
             <h2>Core capabilities across AI, machine learning, and data.</h2>
           </div>
-          <p class="section__lead">A focused foundation in AI, machine learning, and the tools
-            shaping modern
+          <p class="section__lead">A hands-on technical foundation focused on building, scaling, and deploying
             intelligent systems.</p>
         </div>
 
         <div class="stack-grid">
           <article class="skill-card magnetic-card">
             <h3>Machine Learning</h3>
-            <p>Building a foundation in machine learning through practical models and data-driven
-              problem solving.</p>
+            <p>Practical modeling, feature engineering, and data-driven problem solving.</p>
             <div class="skill-tags">
               <span class="tag">Python</span>
               <span class="tag">Scikit-Learn</span>
-              <span class="tag">Supervised Learning</span>
+              <span class="tag">Pandas</span>
               <span class="tag">Model Evaluation</span>
             </div>
           </article>
 
           <article class="skill-card magnetic-card">
             <h3>Deep Learning</h3>
-            <p>Exploring neural networks and learning-based approaches for intelligent
-              applications.</p>
+            <p>Designing neural architectures for computer vision and perception tasks.</p>
             <div class="skill-tags">
               <span class="tag">ANNs</span>
               <span class="tag">CNNs</span>
-              <span class="tag">RNNs</span>
               <span class="tag">Computer Vision</span>
+              <span class="tag">RNNs</span>
             </div>
           </article>
 
           <article class="skill-card magnetic-card">
             <h3>Gen &amp; Agentic AI</h3>
-            <p>Exploring modern AI through language models, retrieval, and intelligent workflows.
-            </p>
+            <p>Building LLM-driven workflows, retrieval pipelines, and autonomous agents.</p>
             <div class="skill-tags">
               <span class="tag">LLMs</span>
               <span class="tag">RAG</span>
               <span class="tag">AI Agents</span>
+              <span class="tag">LangChain</span>
             </div>
           </article>
 
           <article class="skill-card magnetic-card">
-            <h3>Professional Strengths</h3>
-            <p>A strong problem-solving mindset with a focus on continuous learning, effective
-              communication, and seamless team collaboration.</p>
+            <h3>Tools &amp; Deployment</h3>
+            <p>Developing, testing, and containerizing performant AI services and APIs.</p>
             <div class="skill-tags">
-              <span class="tag">Continuous Learning</span>
-              <span class="tag">Communication</span>
-              <span class="tag">Team Collaboration</span>
+              <span class="tag">Git</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">Docker</span>
+              <span class="tag">OpenCV</span>
             </div>
           </article>
         </div>
@@ -1176,7 +1177,7 @@
               <a class="contact-item" href="https://www.linkedin.com/in/shubh-sathwara-4b1baa282/" target="_blank"
                 rel="noreferrer">
                 <strong>LinkedIn</strong>
-                <span>https://www.linkedin.com/in/shubh-sathwara-4b1baa282/</span>
+                <span>linkedin.com/in/shubh-sathwara ↗</span>
               </a>
             </div>
           </div>
