@@ -221,22 +221,28 @@
       background: #000000;
     }
 
-    /* 🟣 Cindy Zhu Ambient Plasma Halo */
+    /* 🟣 Cindy Zhu Ethereal Deep-Space Plasma Orb */
     .ambient-orb {
       position: absolute;
       top: 0;
       left: 0;
-      width: 220px;
-      height: 220px;
+      width: 240px;
+      height: 240px;
       border-radius: 50%;
       pointer-events: none;
       z-index: 2;
       mix-blend-mode: screen;
-      background:
-        radial-gradient(circle at 48% 48%, rgba(25, 10, 50, 0) 0%, rgba(95, 35, 200, 0.35) 35%, rgba(150, 75, 255, 0.85) 60%, rgba(60, 160, 255, 0.65) 78%, transparent 100%),
-        radial-gradient(circle at 50% 50%, rgba(195, 120, 255, 0.85) 0%, rgba(95, 40, 220, 0.5) 45%, transparent 75%);
-      filter: blur(8px);
-      box-shadow: 0 0 60px rgba(135, 55, 255, 0.55), inset 0 0 35px rgba(180, 110, 255, 0.45);
+      background: radial-gradient(
+        circle at 50% 50%,
+        rgba(15, 5, 30, 0.1) 0%,
+        rgba(75, 20, 160, 0.45) 28%,
+        rgba(110, 45, 235, 0.5) 48%,
+        rgba(40, 75, 210, 0.3) 68%,
+        rgba(10, 20, 60, 0.08) 85%,
+        transparent 100%
+      );
+      filter: blur(14px);
+      box-shadow: 0 0 50px rgba(90, 30, 210, 0.25);
       will-change: transform, opacity;
     }
 
@@ -858,16 +864,14 @@
 
     <!-- 4 Image Layers in assets folder -->
     <div class="hero__media" id="liquidHero">
-      <div class="ambient-orb" id="ambientOrb"
-        style="transform: translate3d(432.2px, 310.8px, 0px) scale(0.86); opacity: 0.93;"></div>
-
+      <div class="ambient-orb" id="ambientOrb"></div>
       <img class="layer-base" src="assets/portrait-base.jpg" alt="Base Layer">
       <img class="layer-fringe red" id="imgFringeR" src="assets/portrait-chrome-fringe-red.jpg" alt=""
         style="mask-image: radial-gradient(90.3px at 542.2px 420.8px, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0) 77.3px, rgb(255, 255, 255) 83.8px, rgba(255, 255, 255, 0) 90.3px); opacity: 1; transform: translateX(-4px);">
       <img class="layer-fringe blue" id="imgFringeB" src="assets/portrait-chrome-fringe-blue.jpg" alt=""
         style="mask-image: radial-gradient(90.3px at 542.2px 420.8px, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0) 77.3px, rgb(255, 255, 255) 83.8px, rgba(255, 255, 255, 0) 90.3px); opacity: 1; transform: translateX(4px);">
       <img class="layer-chrome" id="imgChrome" src="assets/portrait-chrome.jpg" alt=""
-        style="mask-image: radial-gradient(83.8px at 542.2px 420.8px, rgb(255, 255, 255) 0px, rgb(255, 255, 255) 65.8px, rgba(255, 255, 255, 0) 83.8px); opacity: 1;">
+        style="mask-image: radial-gradient(83.8px at 542.2px 420.8px, rgb(255, 255, 255) 0px, rgb(255, 255, 255) 65.8px, rgba(255, 255, 255) 0px 83.8px); opacity: 1;">
     </div>
   </section>
 
@@ -1355,9 +1359,9 @@
         var orbRadius = Math.min(w, h) * (0.136 + Math.sin(t * 1.8) * 0.012);
 
         if (ambientOrb) {
-          var orbScale = 0.96 + Math.sin(t * 1.5) * 0.08;
-          var orbOpacity = 0.82 + Math.cos(t * 1.2) * 0.14;
-          ambientOrb.style.transform = "translate3d(" + (orbX - 110).toFixed(2) + "px, " + (orbY - 110).toFixed(2) + "px, 0) scale(" + orbScale.toFixed(3) + ")";
+          var orbScale = 0.94 + Math.sin(t * 1.5) * 0.08;
+          var orbOpacity = 0.72 + Math.cos(t * 1.2) * 0.14;
+          ambientOrb.style.transform = "translate3d(" + (orbX - 120).toFixed(2) + "px, " + (orbY - 120).toFixed(2) + "px, 0) scale(" + orbScale.toFixed(3) + ")";
           ambientOrb.style.opacity = orbOpacity.toFixed(3);
         }
 
