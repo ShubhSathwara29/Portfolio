@@ -181,17 +181,28 @@
       font-weight: 700;
     }
 
+    /* Bottom-Right Auto-Scroll Timer & Cue */
     .hero-scroll-cue {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      gap: 8px;
+      gap: 6px;
       pointer-events: auto;
+      transition: opacity 0.4s ease;
     }
 
-    .hero-scroll-cue span {
-      font-size: 0.88rem;
-      color: var(--muted);
+    .hero-scroll-cue.is-hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .timer-badge {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--coral);
+      letter-spacing: 0.06em;
+      line-height: 1;
     }
 
     .hover-meter {
@@ -206,7 +217,12 @@
       width: 0%;
       height: 100%;
       background: var(--coral);
-      transition: width 0.1s linear;
+      transition: width 0.05s linear;
+    }
+
+    .hero-scroll-cue span.scroll-text {
+      font-size: 0.88rem;
+      color: var(--muted);
     }
 
     /* PORTRAIT MEDIA & FLOATING ATMOSPHERIC ORB */
@@ -398,10 +414,6 @@
       opacity: 1;
       transform: translateY(0);
       pointer-events: auto;
-    }
-
-    body.site-revealed .hover-meter {
-      opacity: 0;
     }
 
     .section {
@@ -868,12 +880,13 @@
           ENGINEERING SYSTEMS THAT <span class="highlight">THINK.</span>
         </p>
 
-        <!-- Bottom Right Hover Progress Meter & Scroll Cue -->
-        <div class="hero-scroll-cue">
+        <!-- Bottom Right Auto-Scroll Timer Marker & Scroll Cue -->
+        <div class="hero-scroll-cue" id="heroScrollCue">
+          <span class="timer-badge" id="timerCountdown">5s</span>
           <div class="hover-meter">
-            <div class="hover-meter-bar" id="hoverProgressBar" style="width: 12.1743%;"></div>
+            <div class="hover-meter-bar" id="hoverProgressBar" style="width: 0%;"></div>
           </div>
-          <span>(Scroll)</span>
+          <span class="scroll-text">(Scroll)</span>
         </div>
       </div>
     </div>
@@ -1219,7 +1232,7 @@
     </div>
   </footer>
 
-  <!-- HERO OPTICAL SWEEP ENGINE -->
+  <!-- HERO OPTICAL SWEEP & AUTO-SCROLL ENGINE -->
   <script>
     (function () {
       "use strict";
@@ -1232,6 +1245,8 @@
       var fringeB = document.getElementById("imgFringeB");
       var ambientOrb = document.getElementById("ambientOrb");
       var progressBar = document.getElementById("hoverProgressBar");
+      var timerCountdown = document.getElementById("timerCountdown");
+      var heroScrollCue = document.getElementById("heroScrollCue");
       var stickyHeader = document.getElementById("stickyHeader");
 
       if (!hero || !chrome || !fringeR || !fringeB) return;
@@ -1254,9 +1269,12 @@
       var trail = [];
 
       var orbX = 0, orbY = 0;
-      var REQUIRED_HOVER_MS = 3500;
-      var hoverAccumulator = 0;
       var isRevealed = false;
+
+      // 5-Second Auto-Scroll State
+      var AUTO_SCROLL_DURATION = 5000;
+      var autoScrollStartTime = performance.now();
+      var autoScrolled = false;
 
       function measure() {
         var rect = hero.getBoundingClientRect();
@@ -1371,12 +1389,28 @@
           ambientOrb.style.opacity = orbOpacity.toFixed(3);
         }
 
-        if (pointerActive && !isRevealed) {
-          hoverAccumulator += dt;
-          var progress = Math.min(100, (hoverAccumulator / REQUIRED_HOVER_MS) * 100);
-          if (progressBar) progressBar.style.width = progress + "%";
-          if (hoverAccumulator >= REQUIRED_HOVER_MS) {
-            triggerSiteReveal();
+        // Live 5-Second Timer Countdown & Progress Sweep
+        if (!autoScrolled) {
+          if (window.scrollY > 80) {
+            autoScrolled = true;
+          } else {
+            var elapsed = now - autoScrollStartTime;
+            var progress = Math.min(100, (elapsed / AUTO_SCROLL_DURATION) * 100);
+            if (progressBar) progressBar.style.width = progress + "%";
+
+            var remainingSec = Math.max(0, Math.ceil((AUTO_SCROLL_DURATION - elapsed) / 1000));
+            if (timerCountdown) timerCountdown.textContent = remainingSec + "s";
+
+            if (elapsed >= AUTO_SCROLL_DURATION) {
+              autoScrolled = true;
+              triggerSiteReveal();
+              var aboutSection = document.getElementById("about");
+              if (aboutSection) {
+                aboutSection.scrollIntoView({ behavior: "smooth" });
+              } else {
+                window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
+              }
+            }
           }
         }
 
@@ -1433,11 +1467,13 @@
       }, { passive: true });
 
       window.addEventListener("scroll", function () {
-        if (window.scrollY > 120) {
+        if (window.scrollY > 80) {
           triggerSiteReveal();
           if (stickyHeader) stickyHeader.classList.add("is-sticky");
+          if (heroScrollCue) heroScrollCue.classList.add("is-hidden");
         } else {
           if (stickyHeader) stickyHeader.classList.remove("is-sticky");
+          if (heroScrollCue && !autoScrolled) heroScrollCue.classList.remove("is-hidden");
         }
       }, { passive: true });
 
